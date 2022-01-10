@@ -10,17 +10,17 @@ namespace ProjetoElevador
 
             bool continuar = true;
 
-            Console.WriteLine("Informe a capacidade máxima do elevador");
+            Console.WriteLine("Informe a capacidade máxima do elevador.");
             string _capacidadeMaxima = Console.ReadLine();
             int capacidade = int.Parse(_capacidadeMaxima);
 
-            Console.WriteLine("Informe o número de andares do prédio");
+            Console.WriteLine("Informe o número de andares do prédio.");
             string _andaresDoPredio = Console.ReadLine();
-            int totalAndares = int.Parse(_andaresDoPredio);
+            int _totalAndares = int.Parse(_andaresDoPredio);
 
 
             Console.Clear();
-            Elevador e = new Elevador(capacidade, totalAndares, 0, 0, 0);
+            Elevador e = new Elevador(capacidade, _totalAndares, 0, 0, 0);
 
 
             //MENU
@@ -30,10 +30,10 @@ namespace ProjetoElevador
                 e.Iniciar();
 
                 Console.WriteLine(@"Escolha uma opção:
-                                          1 - para entrar no elevador 
-                                          2 - para escolher andar
-                                          3 - para sair do elevador
-                                          4 - para sair do programa
+1 - para entrar no elevador 
+2 - para escolher andar
+3 - para sair do elevador
+4 - para sair do programa
                                 ");
 
                 string opcaoEscolhida = Console.ReadLine();
