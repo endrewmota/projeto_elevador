@@ -20,7 +20,8 @@ namespace ProjetoElevador
 
 
             Console.Clear();
-            Elevador e = new Elevador(capacidade, _totalAndares, 0, 0, 0);
+
+            Elevador e = new Elevador(capacidade, _totalAndares, 0, 0);
 
 
             //MENU
@@ -31,9 +32,10 @@ namespace ProjetoElevador
 
                 Console.WriteLine(@"Escolha uma opção:
 1 - para entrar no elevador 
-2 - para escolher andar
-3 - para sair do elevador
-4 - para sair do programa
+2 - para sair do elevador
+3 - para o elevador subir
+4 - para o elevador descer
+5 - para sair do programa
                                 ");
 
                 string opcaoEscolhida = Console.ReadLine();
@@ -47,14 +49,18 @@ namespace ProjetoElevador
                         break;
 
                     case "2":
-                        e.EscolherAndar();
-                        break;
-
-                    case "3":
                         e.Sair();
                         break;
 
+                    case "3":
+                        e.Subir();
+                        break;
+
                     case "4":
+                        e.Descer();
+                        break;
+
+                    case "5":
                         continuar = false;
                         Console.WriteLine("Finalizando programa");
                         break;
